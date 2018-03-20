@@ -1,0 +1,18 @@
+<div>
+  <mat-table [dataSource]="todoList">
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef> id </mat-header-cell>
+      <mat-cell *matCellDef="let element"> {{element.id}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef> name </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="priority">
+        <mat-header-cell *matHeaderCellDef> priority </mat-header-cell>
+        <mat-cell *matCellDef="let element"> {{element.priority}} </mat-cell>
+    </ng-container>
+    <mat-header-row *matHeaderRowDef="columnsName"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: columnsName"></mat-row>
+  </mat-table>
+</div>
